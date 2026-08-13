@@ -1,0 +1,150 @@
+:root {
+    --verde: #176b4d;
+    --verde-escuro: #0d4935;
+    --verde-claro: #e8f5ef;
+    --branco: #ffffff;
+    --cinza: #5f6b66;
+    --fundo: #f4f7f5;
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--fundo);
+    color: #1f2925;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: 0 auto;
+}
+
+.cabecalho {
+    background: linear-gradient(135deg, var(--verde-escuro), var(--verde));
+    color: var(--branco);
+    padding: 55px 0 65px;
+}
+
+.nome-colegio {
+    margin-bottom: 18px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+h1 {
+    max-width: 850px;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    max-width: 780px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.conteudo {
+    padding: 35px 0 60px;
+}
+
+.informacoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.informacoes div {
+    background: var(--branco);
+    border-left: 4px solid var(--verde);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: var(--sombra);
+}
+
+.informacoes strong,
+.informacoes span {
+    display: block;
+}
+
+.informacoes strong {
+    color: var(--verde);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.informacoes span {
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.imagem-noticia {
+    margin: 0 0 35px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: var(--branco);
+    box-shadow: var(--sombra);
+}
+
+.imagem-noticia img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.imagem-noticia figcaption {
+    padding: 12px 18px;
+    color: var(--cinza);
+    font-size: 0.9rem;
+}
+
+.noticia {
+    background: var(--branco);
+    border-radius: 14px;
+    padding: 35px;
+    box-shadow: var(--sombra);
+}
+
+.noticia p {
+    margin-bottom: 20px;
+}
+
+.noticia p:last-child {
+    margin-bottom: 0;
+}
+
+.rodape {
+    padding: 25px;
+    background: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+    .informacoes {
+        grid-template-columns: 1fr;
+    }
+
+    .noticia {
+        padding: 25px 20px;
+    }
+
+    .cabecalho {
+        padding: 40px 0 45px;
+    }
+}
+
